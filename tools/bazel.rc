@@ -1,0 +1,2 @@
+build --cxxopt='--std=c++11'
+test --test_output='errors'

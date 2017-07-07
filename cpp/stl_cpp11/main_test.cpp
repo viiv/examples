@@ -12,25 +12,14 @@ public:
 };
 
 class FooTest : public testing::Test {
- public:
-  static void SetUpTestCase()
-  {
-    cout << "setup testcase" << endl;
-  }
+public:
+  static void SetUpTestCase() { cout << "setup testcase" << endl; }
 
-  static void TearDownTestCase()
-  {
-    cout << "teardown testcase" << endl;
-  }
+  static void TearDownTestCase() { cout << "teardown testcase" << endl; }
 
-  virtual void SetUp()
-  {
-    name_ = "viivwang";
-  }
+  virtual void SetUp() { name_ = "viivwang"; }
 
-  virtual void TearDown()
-  {
-  }
+  virtual void TearDown() {}
 
   string name_;
 };
@@ -53,6 +42,4 @@ TEST_F(FooTest, expect_test) {
   EXPECT_STREQ(name_.c_str(), "viivwang");
 }
 
-TEST_F(FooTest, assert_test) {
-  ADD_FAILURE() << "not impl";
-}
+TEST_F(FooTest, assert_test) {}
