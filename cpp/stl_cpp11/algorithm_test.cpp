@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 
+#include <array>
+
 using namespace std;
 
 struct AlgorithmTest : public testing::Test {
