@@ -48,4 +48,9 @@ TEST_F(AlgorithmTest, test_non_modifying_sequence_operations) {
 
   itor = find_if(begin(foo), end(foo), [&](int i) { return i > 100; });
   EXPECT_EQ(*itor, 163);
+
+  itor = find_if_not(begin(foo), end(foo), [&](int i){return i==3;});
+  EXPECT_EQ(*itor, 5);
+  itor = find_if_not(itor, end(foo), [&](int i){return i==3;});
+  EXPECT_EQ(*itor, 5);
 }
